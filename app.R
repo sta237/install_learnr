@@ -4,6 +4,7 @@ server <- function(input, output) {
   output$result <- renderText({
     withProgress(message = 'Checking required packages', value = 0, {
       if (!require(learnr)) {
+        incProgress(NULL, detail = "Installing learnr")
         incProgress(install.packages("learnr"), detail = "Installing learnr")
       }
     })
