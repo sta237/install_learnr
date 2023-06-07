@@ -27,9 +27,13 @@ server <- function(input, output) {
         incProgress(NULL, detail = "Installing learnr")
         incProgress(install.packages("learnr"), detail = "Installing learnr")
       }
+      if (!require(kableExtra)) {
+        incProgress(NULL, detail = "Installing kableExtra")
+        incProgress(install.packages("kableExtra"), detail = "Installing kableExtra")
+      }
     })
-    if (require(learnr)) {
-      "`learnr` installed."
+    if (require(learnr) & require(kableExtra)) {
+      "`learnr` and `kableExtra` installed."
     }
   })
 }
