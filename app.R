@@ -1,7 +1,7 @@
 library(shiny)
 
-lesson_nums <- c("01", "02", "03", "04", "05", "06", "07")
-activity_nums <- c("01", "02", "03")
+lesson_nums <- c("01", "02", "03", "04", "05", "06", "07", "08")
+activity_nums <- c("01", "02", "03", "04")
 
 rlesson_links <- paste0(
   "https://r.datatools.utoronto.ca/hub/user-redirect/git-pull?",
